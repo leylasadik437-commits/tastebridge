@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TasteBridge</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f2ed;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h2 {
+  margin: 0;
+  font-family: 'Playfair Display';
+}
+
+.logo small {
+  font-size: 12px;
+  color: gray;
+}
+
+.nav-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  padding: 6px;
+}
+
+.login-btn {
+  background: #2c1b10;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url('food.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display';
+  font-size: 60px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.orange {
+  background: #ff7a00;
+  color: white;
+}
+
+/* SECTION */
+.section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* CATEGORY */
+.category-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.category-card {
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.category-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* FOOD LIST */
+.food-list {
+  display: none;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* RECIPES */
+.recipes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.recipe-card {
+  width: 200px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* HEART */
+.heart {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* CTA */
+.cta {
+  background: #f1e8dc;
+  padding: 50px;
+  text-align: center;
+}
+
+/* LOGIN */
+.login-section {
+  background: url('food.jpg') center/cover no-repeat;
+  padding: 80px;
+}
+
+.login-box {
+  display: flex;
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.login-left {
+  width: 40%;
+  background: #f5f2ed;
+  padding: 30px;
+}
+
+.login-right {
+  width: 60%;
+  padding: 30px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <span style="font-size:25px;">🍽️</span>
+    <div>
+      <h2>TasteBridge</h2>
+      <small>Traditional & Modern Recipes</small>
+    </div>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="gogo.html">Recipes</a>
+    <a href="catagories.html">Categories</a>
+    <a href="bobo.html">Favorites</a>
+    <a href="about us.html">About Us</a>
+  </div>
+
+  <div class="right">
+    <input class="search" placeholder="Search recipes...">
+    <button class="login-btn" onclick="scrollToLogin()">Login / Sign Up</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Let’s Cook Together</h1>
+    <p>From Tradition to Trend</p>
+    <button class="btn orange">Explore Recipes</button>
+    <button class="btn" onclick="scrollToLogin()">Login</button>
+  </div>
+</div>
+
+<!-- CATEGORY -->
+<div class="section">
+  <h2>Browse Categories</h2>
+
+  <div class="category-container">
+    <div class="category-card">
+      <img src="traditional.jpg">
+      <h3>Traditional Recipes</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="modern.jpg">
+      <h3>Modern Recipes</h3>
+    </div>
+  </div>
+
+  <!-- BUTTONS -->
+  <div style="margin-top:30px;">
+    <button class="btn orange" onclick="showCategory('traditional')">Traditional</button>
+    <button class="btn" onclick="showCategory('modern')">Modern</button>
+  </div>
+
+  <!-- TRADITIONAL -->
+  <div id="traditional" class="food-list">
+
+    <div class="recipe-card">
+      <a href="doro.html"><img src="doro.jpg"><p>Doro Wot</p></a>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+
+    <div class="recipe-card">
+      <a href="shiro.html"><img src="shiro.jpg"><p>Shiro Wot</p></a>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+
+    <div class="recipe-card">
+      <a href="firfir.html"><img src="firfir.jpg"><p>Firfir</p></a>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+
+  </div>
+
+  <!-- MODERN -->
+  <div id="modern" class="food-list">
+
+    <div class="recipe-card">
+      <a href="burger.html"><img src="burgerchick.jpg"><p>Burger</p></a>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+
+    <div class="recipe-card">
+      <a href="lol.html"><img src="pol.jpg"><p>Chicken Roast</p></a>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+
+    <div class="recipe-card">
+      <a href="lasagna.html"><img src="lazagna.jpg"><p>Lasagna</p></a>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FEATURED RECIPES -->
+<div class="section">
+  <h2>Featured Recipes</h2>
+
+  <div class="recipes">
+
+    <div class="recipe-card">
+      <img src="doro.jpg"><p>Doro Wot</p>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+
+    <div class="recipe-card">
+      <img src="shiro.jpg"><p>Shiro Wot</p>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+
+    <div class="recipe-card">
+      <img src="burgerchick.jpg"><p>Burger</p>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+<div class="recipe-card">
+      <img src="lazagna.jpg"><p>lasagna</p>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+<div class="recipe-card">
+      <img src="firfir.jpg"><p>firfir</p>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+<div class="recipe-card">
+      <img src="pol.jpg"><p> chicken roast</p>
+      <span class="heart" onclick="toggleHeart(this)">🤍</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Ready to cook something amazing?</h2>
+  <button class="btn orange">Start Cooking</button>
+</div>
+
+<!-- LOGIN -->
+<div class="login-section">
+  <div class="login-box">
+
+    <div class="login-left">
+      <h2>Welcome Back!</h2>
+      <p>Good food brings us together.</p>
+    </div>
+
+    <div class="login-right">
+      <h2>Login</h2>
+      <input placeholder="Email">
+      <input placeholder="Password">
+      <button class="btn orange">Login</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function toggleHeart(el){
+  el.innerHTML = (el.innerHTML === "🤍") ? "❤️" : "🤍";
+}
+
+function showCategory(type) {
+  document.getElementById('traditional').style.display = "none";
+  document.getElementById('modern').style.display = "none";
+  document.getElementById(type).style.display = "flex";
+}
+
+function scrollToLogin() {
+  document.querySelector('.login-section').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
