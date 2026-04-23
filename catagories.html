@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Categories</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('rgb.jpg') center/cover no-repeat;
+}
+
+/* OVERLAY */
+.overlay {
+  background: rgba(0,0,0,0.7);
+  min-height: 100vh;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+/* TITLE */
+h1 {
+  font-family: 'Playfair Display';
+  font-size: 50px;
+}
+
+/* CARDS */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 20px;
+  width: 280px;
+  backdrop-filter: blur(10px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+
+/* LINKS */
+.card a {
+  display: block;
+  margin: 10px 0;
+  color: #ffb347;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.card a:hover {
+  color: #ff7a00;
+}
+
+/* BACK BUTTON */
+.back {
+  margin-top: 40px;
+}
+
+.back a {
+  padding: 10px 20px;
+  background: #ff7a00;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+  <h1>🍽️ Categories</h1>
+  <p>Choose what you want to cook today</p>
+
+  <div class="container">
+
+    <!-- TRADITIONAL -->
+    <div class="card">
+      <h2>Traditional</h2>
+      <a href="shiro.html">Shiro Wot</a>
+      <a href="doro.html">Doro Wot</a>
+      <a href="firfir.html">Firfir</a>
+    </div>
+
+    <!-- MODERN -->
+    <div class="card">
+      <h2>Modern</h2>
+      <a href="burger.html">Burger</a>
+      <a href="chicken.html">Chicken Roast</a>
+      <a href="lasagna.html">Lasagna</a>
+    </div>
+
+  </div>
+
+  <div class="back">
+    <a href="index.html">⬅ Back Home</a>
+  </div>
+
+</div>
+
+</body>
+</html>

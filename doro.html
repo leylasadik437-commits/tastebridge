@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Doro Wot</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('doro.jpg') center/cover no-repeat;
+  color: white;
+}
+
+/* OVERLAY */
+.overlay {
+  background: rgba(0,0,0,0.75);
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 60px;
+  margin-bottom: 5px;
+}
+
+.title p {
+  color: #ffb347;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.orange {
+  background: #ff7a00;
+  color: white;
+}
+
+/* MAIN BOX */
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* INGREDIENT CARD */
+.card {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+/* STEPS */
+.steps {
+  margin-top: 30px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.step span {
+  background: #ff7a00;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+/* CHEF */
+.chef {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 220px;
+  pointer-events: none;
+}
+
+/* BACK */
+.back {
+  text-align: center;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+  <div class="title">
+    <h1>Doro Wot ❤️</h1>
+    <p>Spicy Ethiopian Chicken Stew 🍗</p>
+
+    <button class="btn orange" onclick="showText()">Text Recipe</button>
+    <button class="btn" onclick="showVideo()">Video Guide</button>
+  </div>
+
+  <!-- TEXT RECIPE -->
+  <div id="textBox" class="container">
+
+    <h2>Ingredients</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="dero.jpg">
+        <div>Chicken pieces</div>
+      </div>
+
+      <div class="card">
+        <img src="oil.jpg">
+        <div>Oil or butter</div>
+      </div>
+
+      <div class="card">
+        <img src="onion.jpg">
+        <div>Onions</div>
+      </div>
+
+      <div class="card">
+        <img src="chili.jpg">
+        <div>Berbere spice</div>
+      </div>
+
+      <div class="card">
+        <img src="garlic.jpg">
+        <div>Garlic & ginger</div>
+      </div>
+
+      <div class="card">
+        <img src="eggs.jpg">
+        <div>Boiled eggs</div>
+      </div>
+
+    </div>
+
+    <!-- STEPS -->
+    <div class="steps">
+      <h2>Steps</h2>
+
+      <div class="step"><span>1</span> Cook chopped onions until dry</div>
+      <div class="step"><span>2</span> Add oil, garlic, ginger, and berbere</div>
+      <div class="step"><span>3</span> Add chicken pieces and cook well</div>
+      <div class="step"><span>4</span> Pour water and simmer slowly</div>
+      <div class="step"><span>5</span> Add boiled eggs and cook until thick</div>
+    </div>
+
+  </div>
+
+  <!-- VIDEO -->
+  <div id="videoBox" class="container" style="display:none;">
+    <iframe width="100%" height="400"
+    src="https://www.youtube.com/embed/REPLACE_DORO_VIDEO"
+    allowfullscreen></iframe>
+  </div>
+
+  <div class="back">
+    <a href="index.html" style="color:#ffb347;">⬅ Back to Home</a>
+  </div>
+
+</div>
+
+<script>
+function showText(){
+  document.getElementById("textBox").style.display = "block";
+  document.getElementById("videoBox").style.display = "none";
+}
+
+function showVideo(){
+  document.getElementById("videoBox").style.display = "block";
+  document.getElementById("textBox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
